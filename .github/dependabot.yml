@@ -3,6 +3,16 @@ updates:
 - package-ecosystem: nuget
   directory: "/"
   schedule:
-    interval: daily
-    time: "04:00"
-  open-pull-requests-limit: 10
+    interval: weekly
+  groups:
+    aspnet:
+      patterns:
+        - "Microsoft.AspNet*"
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: "weekly"
+  groups:
+    github:
+      patterns:
+        - "github/*"
